@@ -1,0 +1,22 @@
+{
+    "name": "@nixyorg/auth-prisma-adapter",
+    "version": "0.0.0",
+    "description": "Prisma adapter for Auth.js with entity support.",
+    "author": "Nixy <info@nixy.software>",
+    "repository": "github:NixyOrg/auth",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "type": "module",
+    "scripts": {
+        "lint": "eslint . --max-warnings 0"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@repo/config": "*",
+        "@types/node": "^20.10.6",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
+    }
+}
