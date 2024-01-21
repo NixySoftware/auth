@@ -1,7 +1,7 @@
 {
-    "name": "@nixyorg/auth-prisma-adapter",
+    "name": "@nixyorg/auth-adapter-prisma-providers",
     "version": "0.0.0",
-    "description": "Prisma adapter for Auth.js with entity support.",
+    "description": "Prisma adapter for Auth.js with database configurable providers.",
     "author": "Nixy <info@nixy.software>",
     "repository": "github:NixyOrg/auth",
     "license": "MIT",
@@ -9,7 +9,17 @@
         "access": "public"
     },
     "type": "module",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
     "scripts": {
+        "build": "tsc",
         "lint": "eslint . --max-warnings 0"
     },
     "dependencies": {},
@@ -18,5 +28,9 @@
         "@types/node": "^20.10.6",
         "eslint": "^8.56.0",
         "typescript": "^5.3.3"
+    },
+    "peerDependencies": {
+        "@prisma/client": ">=5.0.0",
+        "next-auth": ">=4.0.0"
     }
 }

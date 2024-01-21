@@ -1,0 +1,15 @@
+import {EmailAddress} from "./EmailAddress"
+import {User} from "./User"
+
+model Entity {
+    id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    handle String? @unique @db.Text
+    name   String  @db.Text
+
+    profileImageUrl String?        @db.Text
+    user            User?
+    emailAddresses  EmailAddress[]
+}

@@ -1,5 +1,4 @@
 import {Entity} from "./Entity"
-import {OAuthClientConnection} from "./OAuthClientConnection"
 import {Session} from "./Session"
 
 model AuthToken {
