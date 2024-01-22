@@ -38,21 +38,21 @@ export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrisma
 
     const userTransformer =
         options.transformers?.user ??
-        (async (user) => ({
+        ((user) => ({
             name: user.entity.name,
             image: user.entity.profileImageUrl
         }));
 
     const createTransformer =
         options.transformers?.create ??
-        (async ({name, image}) => ({
+        (({name, image}) => ({
             name: name ?? '',
             profileImageUrl: image
         }));
 
     const updateTransformer =
         options.transformers?.update ??
-        (async ({image}, user) => ({
+        (({image}, user) => ({
             profileImageUrl: user.entity.profileImageUrl ? undefined : image
         }));
 
@@ -77,7 +77,7 @@ export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrisma
         return toAdapterUser(user);
     };
 
-    const toAdapterSession = (session: Prisma.SessionGetPayload<{}>): AdapterSession => ({
+    const toAdapterSession = (session: Prisma.SessionGetPayload<Record<string, never>>): AdapterSession => ({
         expires: session.expiresAt,
         sessionToken: session.token,
         userId: session.userId
@@ -105,7 +105,9 @@ export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrisma
         session_state: connection.sessionState ?? undefined
     });
 
-    const toAdapterVerificationToken = (authToken: Prisma.AuthTokenGetPayload<{}>): VerificationToken => ({
+    const toAdapterVerificationToken = (
+        authToken: Prisma.AuthTokenGetPayload<Record<string, never>>
+    ): VerificationToken => ({
         identifier: authToken.email,
         token: authToken.token,
         expires: authToken.expiresAt

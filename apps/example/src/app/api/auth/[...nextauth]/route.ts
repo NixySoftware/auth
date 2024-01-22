@@ -1,6 +1,9 @@
-import {getBaseAuthOptions, getGlobalAdapterProviders} from '@nixyorg/auth-adapter-prisma-providers';
 import NextAuth from 'next-auth';
 import type {NextRequest} from 'next/server';
+
+import {getGlobalAdapterProviders} from '@nixyorg/auth-adapter-prisma-providers';
+
+import {getBaseAuthOptions} from '~/server/auth';
 import {prisma} from '~/server/prisma';
 
 // TODO: move as much as possible to the library

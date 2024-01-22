@@ -55,7 +55,7 @@ enum OAuthClientProviderType {
     SPOTIFY
     STRAVA
     TODOIST
-    TRAK
+    TRAKT
     TWITCH
     TWITTER
     UNITED_EFFECTS
