@@ -24,7 +24,8 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "@repo/config": "*",
+        "@repo/eslint-config": "*",
+        "@repo/typescript-config": "*",
         "@types/node": "^20.10.6",
         "eslint": "^8.56.0",
         "typescript": "^5.3.3"
