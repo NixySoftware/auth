@@ -13,11 +13,13 @@ export interface AdapterPrismaOptions<
     transformers?: {
         user: (user: Prisma.UserGetPayload<{include: UserInclude}>) => Pick<AdapterUser, 'name' | 'image'>;
 
-        create: (adapterUser: Omit<AdapterUser, 'id'>) => Promise<Prisma.EntityCreateWithoutUserInput>;
+        create: (
+            adapterUser: Omit<AdapterUser, 'id'>
+        ) => Promise<Prisma.EntityCreateWithoutUserInput> | Prisma.EntityCreateWithoutUserInput;
         update: (
             adapterUser: Partial<AdapterUser> & Pick<AdapterUser, 'id'>,
             user: Prisma.UserGetPayload<{include: UserInclude}>
-        ) => Promise<Prisma.EntityUpdateWithoutUserInput>;
+        ) => Promise<Prisma.EntityUpdateWithoutUserInput> | Prisma.EntityUpdateWithoutUserInput;
     };
 }
 
@@ -113,9 +115,8 @@ export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrisma
         expires: authToken.expiresAt
     });
 
+    // Based on the default Prisma adapter (https://github.com/nextauthjs/next-auth/blob/main/packages/adapter-prisma/src/index.ts)
     return {
-        // Based on the default Prisma adapter (https://github.com/nextauthjs/next-auth/blob/main/packages/adapter-prisma/src/index.ts)
-
         async createUser(adapterUser) {
             console.log('create', adapterUser);
             const {email, emailVerified} = adapterUser;
