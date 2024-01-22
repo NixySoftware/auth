@@ -1,6 +1,6 @@
 {
     "name": "@nixyorg/auth-adapter-prisma-providers",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Prisma adapter for Auth.js with database configurable providers.",
     "author": "Nixy <info@nixy.software>",
     "repository": "github:NixyOrg/auth",
