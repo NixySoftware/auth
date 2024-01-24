@@ -3,5 +3,16 @@
     "extends": ["@repo/eslint-config/library.cjs"],
     "globals": {
         "globalThis": true
-    }
+    },
+    "overrides": [
+        {
+            "files": ["src/__tests__/**/*.ts", "src/**/*.test.ts"],
+            "rules": {
+                "@typescript-eslint/no-floating-promises": "off",
+                "@typescript-eslint/no-non-null-assertion": "off",
+
+                "turbo/no-undeclared-env-vars": "off"
+            }
+        }
+    ]
 }

@@ -23,7 +23,7 @@ export interface AdapterPrismaOptions<
     };
 }
 
-export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrismaOptions = {}): Adapter => {
+export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrismaOptions = {}) => {
     type UserInclude = typeof options extends AdapterPrismaOptions<infer UserInclude> ? UserInclude : never;
     type UserWithEntity = Prisma.UserGetPayload<{include: UserInclude}>;
 
@@ -59,6 +59,7 @@ export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrisma
         }));
 
     const toAdapterUser = (user: UserWithEntity): AdapterUser => {
+        console.log(user);
         const emailAddress = user.entity.emailAddresses.find((emailAddress) => emailAddress.isPrimary);
         if (!emailAddress) {
             throw new Error('User has no primary email address.');
