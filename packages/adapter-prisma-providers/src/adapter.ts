@@ -23,7 +23,7 @@ export interface AdapterPrismaOptions<
     };
 }
 
-export const createAdapterPrisma = (prisma: PrismaClient, options: AdapterPrismaOptions = {}) => {
+export const createAdapter = (prisma: PrismaClient, options: AdapterPrismaOptions = {}) => {
     type UserInclude = typeof options extends AdapterPrismaOptions<infer UserInclude> ? UserInclude : never;
     type UserWithEntity = Prisma.UserGetPayload<{include: UserInclude}>;
 
