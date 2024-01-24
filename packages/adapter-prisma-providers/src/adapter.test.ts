@@ -6,7 +6,7 @@ import {v4 as uuidv4} from 'uuid';
 import {describe, expect, test} from 'vitest';
 
 import {mockModel} from './__tests__/util';
-import {createAdapterPrisma} from './adapter';
+import {createAdapter} from './adapter';
 
 const now = DateTime.now().toJSDate();
 
@@ -54,7 +54,7 @@ describe('createAdapterPrisma', () => {});
 describe('AdapterPrisma', () => {
     // TODO: try prisma-mock
     const prisma = new PrismockClient();
-    const adapter = createAdapterPrisma(prisma);
+    const adapter = createAdapter(prisma);
 
     describe('createUser', () => {
         test('should resolve the created adapter user', async () => {

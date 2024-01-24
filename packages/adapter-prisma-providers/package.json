@@ -20,6 +20,7 @@
     },
     "scripts": {
         "build": "tsc",
+        "dev": "tsc --watch",
         "lint": "eslint . --max-warnings 0",
         "test": "vitest",
         "test:coverage": "vitest --coverage",

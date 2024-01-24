@@ -1,6 +1,9 @@
 {
     "root": true,
     "extends": ["@repo/eslint-config/library.cjs"],
+    "parserOptions": {
+        "project": "./tsconfig.eslint.json"
+    },
     "globals": {
         "globalThis": true
     },

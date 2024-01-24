@@ -1,7 +1,7 @@
 import {type AuthOptions, type DefaultSession, getServerSession} from 'next-auth';
 import Email from 'next-auth/providers/email';
 
-import {createAdapterPrisma} from '@nixyorg/auth-adapter-prisma-providers';
+import {createAdapter} from '@nixyorg/auth-adapter-prisma-providers';
 
 import {prisma} from '~/server/prisma';
 
@@ -13,7 +13,7 @@ declare module 'next-auth' {
     }
 }
 
-const adapter = createAdapterPrisma(prisma);
+const adapter = createAdapter(prisma);
 
 export const getBaseAuthOptions = (): AuthOptions => ({
     adapter,
@@ -33,11 +33,11 @@ export const getBaseAuthOptions = (): AuthOptions => ({
         // verifyRequest: '/auth/verify'
     },
     providers: [
-        Email({
-            sendVerificationRequest(params) {
-                console.log(params);
-            }
-        })
+        // Email({
+        //     sendVerificationRequest(params) {
+        //         console.log(params);
+        //     }
+        // })
     ]
 });
 

@@ -20,7 +20,8 @@
     },
     "scripts": {
         "build": "tsc",
-        "dev": "tsx ./src/index.ts",
+        "dev": "tsc --watch",
+        "dev:cli": "tsx ./src/index.ts",
         "lint": "eslint . --max-warnings 0"
     },
     "dependencies": {
