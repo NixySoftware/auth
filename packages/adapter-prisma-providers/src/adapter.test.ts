@@ -49,7 +49,7 @@ const adapterUser: AdapterUser = {
     image: 'https://example.com/images/clara-oswald.png'
 };
 
-describe('createAdapterPrisma', () => {});
+describe.skip('createAdapterPrisma', () => {});
 
 describe('AdapterPrisma', () => {
     // TODO: try prisma-mock
