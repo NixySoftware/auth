@@ -52,6 +52,7 @@ const adapterUser: AdapterUser = {
 describe('createAdapterPrisma', () => {});
 
 describe('AdapterPrisma', () => {
+    // TODO: try prisma-mock
     const prisma = new PrismockClient();
     const adapter = createAdapterPrisma(prisma);
 
