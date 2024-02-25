@@ -1,5 +1,11 @@
 # @nixysoftware/auth-adapter-prisma-providers
 
+## 0.1.2
+
+### Patch Changes
+
+-   Change organisation name
+
 ## 0.1.1
 
 ### Patch Changes
