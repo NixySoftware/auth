@@ -1,8 +1,8 @@
 {
-    "name": "@nixyorg/auth",
+    "name": "@nixysoftware/auth",
     "description": "Auth.js packages.",
     "author": "Nixy <info@nixy.software>",
-    "repository": "github:NixyOrg/auth",
+    "repository": "github:NixySoftware/auth",
     "license": "MIT",
     "private": true,
     "scripts": {

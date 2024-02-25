@@ -1,4 +1,4 @@
-# @nixyorg/auth-cli
+# @nixysoftware/auth-cli
 
 CLI for Nixy Auth.js packages.
 

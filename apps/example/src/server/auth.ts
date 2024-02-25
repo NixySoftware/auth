@@ -1,7 +1,7 @@
 import {type AuthOptions, type DefaultSession, getServerSession} from 'next-auth';
 
 // import Email from 'next-auth/providers/email';
-import {createAdapter} from '@nixyorg/auth-adapter-prisma-providers';
+import {createAdapter} from '@nixysoftware/auth-adapter-prisma-providers';
 
 import {prisma} from '~/server/prisma';
 

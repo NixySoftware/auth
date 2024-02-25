@@ -1,5 +1,5 @@
 {
-    "name": "@nixyorg/auth-example",
+    "name": "@nixysoftware/auth-example",
     "version": "1.0.0",
     "private": true,
     "exports": {
@@ -13,7 +13,7 @@
         "prisma": "prisma-import -f -s '{prisma/base.prisma,src/**/*.prisma}' -o prisma/schema.prisma && prisma"
     },
     "dependencies": {
-        "@nixyorg/auth-adapter-prisma-providers": "*",
+        "@nixysoftware/auth-adapter-prisma-providers": "*",
         "@prisma/client": "^5.8.1",
         "@t3-oss/env-nextjs": "^0.7.3",
         "next": "^14.0.4",

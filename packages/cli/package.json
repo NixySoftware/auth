@@ -1,9 +1,9 @@
 {
-    "name": "@nixyorg/auth-cli",
+    "name": "@nixysoftware/auth-cli",
     "version": "0.0.0",
     "description": "CLI for Nixy Auth.js packages.",
     "author": "Nixy <info@nixy.software>",
-    "repository": "github:NixyOrg/auth",
+    "repository": "github:NixySoftware/auth",
     "license": "MIT",
     "publishConfig": {
         "access": "public"

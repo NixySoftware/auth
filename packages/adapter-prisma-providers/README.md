@@ -1,4 +1,4 @@
-# @nixyorg/auth-adapter-prisma-providers
+# @nixysoftware/auth-adapter-prisma-providers
 
 Prisma adapter for Auth.js with database configurable providers.
 
