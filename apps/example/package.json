@@ -15,7 +15,7 @@
     "dependencies": {
         "@nixysoftware/auth-adapter-prisma-providers": "*",
         "@prisma/client": "^5.8.1",
-        "@t3-oss/env-nextjs": "^0.7.3",
+        "@t3-oss/env-nextjs": "^0.10.0",
         "next": "^14.0.4",
         "next-auth": "^4.24.5",
         "react": "^18.2.0",
