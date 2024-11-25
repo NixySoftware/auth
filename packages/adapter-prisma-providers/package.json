@@ -39,7 +39,7 @@
         "luxon": "^3.4.4",
         "prismock": "^1.26.1",
         "typescript": "^5.3.3",
-        "uuid": "^10.0.0",
+        "uuid": "^11.0.0",
         "vitest": "^1.2.1"
     },
     "peerDependencies": {
