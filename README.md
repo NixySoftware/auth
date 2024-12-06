@@ -2,12 +2,12 @@
 
 ## Packages
 
--   [@nixysoftware/auth-adapter-prisma-providers](./packages/adapter-prisma-providers) - Prisma adapter for Auth.js with database configurable providers.
--   [@nixysoftware/auth-cli](./packages/cli) - CLI for Nixy Auth.js packages.
+- [@nixysoftware/auth-adapter-prisma-providers](./packages/adapter-prisma-providers) - Prisma adapter for Auth.js with database configurable providers.
+- [@nixysoftware/auth-cli](./packages/cli) - CLI for Nixy Auth.js packages.
 
 ## Examples
 
--   [Example](./apps/example)
+- [Example](./apps/example)
 
 ## License
 
