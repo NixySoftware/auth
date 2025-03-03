@@ -16,14 +16,14 @@
         "@nixysoftware/auth-adapter-prisma-providers": "*",
         "@prisma/client": "^5.15.0",
         "@t3-oss/env-nextjs": "^0.12.0",
-        "next": "^14.0.4",
+        "next": "^15.0.0",
         "next-auth": "^4.24.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "zod": "^3.22.4"
     },
     "devDependencies": {
-        "@next/eslint-plugin-next": "^14.0.4",
+        "@next/eslint-plugin-next": "^15.0.0",
         "@repo/eslint-config": "*",
         "@repo/typescript-config": "*",
         "@types/eslint": "^8.56.1",
