@@ -33,14 +33,14 @@
         "@types/luxon": "^3.4.2",
         "@types/node": "^22.0.0",
         "@types/uuid": "^10.0.0",
-        "@vitest/coverage-v8": "^1.2.1",
+        "@vitest/coverage-v8": "^3.0.0",
         "eslint": "^8.56.0",
         "lodash": "^4.17.21",
         "luxon": "^3.4.4",
         "prismock": "^1.26.1",
         "typescript": "^5.3.3",
         "uuid": "^11.0.0",
-        "vitest": "^1.2.1"
+        "vitest": "^3.0.0"
     },
     "peerDependencies": {
         "@prisma/client": ">=5.0.0",
